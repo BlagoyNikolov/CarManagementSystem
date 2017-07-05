@@ -1,0 +1,33 @@
+﻿@model CMS.Web.Models.Calculations
+@{
+    ViewBag.Title = "FuelCalculator";
+}
+
+<h2>FuelCalculator</h2>
+@using (Html.BeginForm("Calculate", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="form-group">
+        @Html.Label("Travelled Distance ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.TextBoxFor(x => x.Distance)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Filled Liters: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.TextBoxFor(x => x.Liters)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 col-md-offset-2">
+            <input type="submit" class="btn btn-default" value="Calculate" />
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Result: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+          @*  @Html.Label((string)ViewBag.result)*@
+            @ViewBag.result L/100
+        </div>
+    </div>
+}

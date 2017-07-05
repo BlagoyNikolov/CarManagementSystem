@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VehiclesDataModelStoreContainer" CdmEntityContainer="VehiclesDataEntities">
+    <EntitySetMapping Name="Belts">
+      <EntityTypeMapping TypeName="VehiclesDataModel.Belt">
+        <MappingFragment StoreEntitySet="Belt">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Range" ColumnName="Range" />
+          <ScalarProperty Name="MonthsToChange" ColumnName="MonthsToChange" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brakes">
+      <EntityTypeMapping TypeName="VehiclesDataModel.Brake">
+        <MappingFragment StoreEntitySet="Brake">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MonthsToChange" ColumnName="MonthsToChange" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuelFilters">
+      <EntityTypeMapping TypeName="VehiclesDataModel.FuelFilter">
+        <MappingFragment StoreEntitySet="FuelFilter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MonthsToChange" ColumnName="MonthsToChange" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oils">
+      <EntityTypeMapping TypeName="VehiclesDataModel.Oil">
+        <MappingFragment StoreEntitySet="Oil">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Range" ColumnName="Range" />
+          <ScalarProperty Name="Viscosity" ColumnName="Viscosity" />
+          <ScalarProperty Name="MonthsToChange" ColumnName="MonthsToChange" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shocks">
+      <EntityTypeMapping TypeName="VehiclesDataModel.Shock">
+        <MappingFragment StoreEntitySet="Shock">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Range" ColumnName="Range" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MonthsToChange" ColumnName="MonthsToChange" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tyres">
+      <EntityTypeMapping TypeName="VehiclesDataModel.Tyre">
+        <MappingFragment StoreEntitySet="Tyre">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="MonthsToChange" ColumnName="MonthsToChange" />
+          <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="VehiclesDataModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UKey" ColumnName="UKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicles">
+      <EntityTypeMapping TypeName="VehiclesDataModel.Vehicle">
+        <MappingFragment StoreEntitySet="Vehicle">
+          <ScalarProperty Name="VehicleType" ColumnName="VehicleType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="AverageMileage" ColumnName="AverageMileage" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="EngineDisplacement" ColumnName="EngineDisplacement" />
+          <ScalarProperty Name="HorsePower" ColumnName="HorsePower" />
+          <ScalarProperty Name="Torque" ColumnName="Torque" />
+          <ScalarProperty Name="FuelType" ColumnName="FuelType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

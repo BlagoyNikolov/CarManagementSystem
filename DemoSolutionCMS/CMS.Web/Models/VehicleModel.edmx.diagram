@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5c4cb84c4920475e858e725a94e7d983" Name="Diagram1">
+        <EntityTypeShape EntityType="VehiclesDataModel.Belt" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehiclesDataModel.Brake" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehiclesDataModel.FuelFilter" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehiclesDataModel.Oil" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehiclesDataModel.Shock" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehiclesDataModel.Tyre" Width="1.5" PointX="5.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehiclesDataModel.User" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehiclesDataModel.Vehicle" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <AssociationConnector Association="VehiclesDataModel.FK_Belt_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="VehiclesDataModel.FK_Brake_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="VehiclesDataModel.FK_FuelFilter_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="VehiclesDataModel.FK_Oil_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="VehiclesDataModel.FK_Shock_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="VehiclesDataModel.FK_Tyre_Vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="VehiclesDataModel.FK_Owner_Vehicle" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

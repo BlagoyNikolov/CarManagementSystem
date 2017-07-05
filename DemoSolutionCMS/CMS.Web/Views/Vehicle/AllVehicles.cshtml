@@ -1,0 +1,25 @@
+﻿@using CMS.Web.Models;
+@model List<Vehicle>
+@{
+    ViewBag.Title = "AllVehicles";
+}
+
+<h2>AllVehicles</h2>
+<ul class="list-group">
+    @foreach (Vehicle item in Model)
+    {
+        <li class="list-group-item">
+            @*@Html.HiddenFor(Model => item.Id)*@
+            <h4>@Html.ActionLink("Details", "Details", "Vehicle", new { @id = item.Id }, null)</h4>
+            <b>@item.Brand</b>
+            <b>@item.Model</b>
+            <b>@item.Year.Year</b>
+            @*@item.Color
+            @item.EngineDisplacement
+            @item.HorsePower
+            @item.Mileage
+            @item.AverageMileage
+            @item.Description*@
+        </li>
+    }
+</ul>

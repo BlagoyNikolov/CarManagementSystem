@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VehiclesDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Belt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Range" Type="int" Nullable="false" />
+    <Property Name="MonthsToChange" Type="int" Nullable="false" />
+    <Property Name="ChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VehicleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Brake">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="MonthsToChange" Type="int" Nullable="false" />
+    <Property Name="ChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VehicleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FuelFilter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="MonthsToChange" Type="int" Nullable="false" />
+    <Property Name="ChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VehicleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Oil">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Range" Type="int" Nullable="false" />
+    <Property Name="Viscosity" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MonthsToChange" Type="int" Nullable="false" />
+    <Property Name="ChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VehicleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shock">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Range" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="MonthsToChange" Type="int" Nullable="false" />
+    <Property Name="ChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VehicleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tyre">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Size" Type="int" Nullable="false" />
+    <Property Name="MonthsToChange" Type="int" Nullable="false" />
+    <Property Name="ChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VehicleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UKey" />
+    </Key>
+    <Property Name="UKey" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OwnerId" Type="int" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Year" Type="datetime" Nullable="false" />
+    <Property Name="Mileage" Type="int" Nullable="false" />
+    <Property Name="AverageMileage" Type="int" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EngineDisplacement" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="HorsePower" Type="int" Nullable="false" />
+    <Property Name="Torque" Type="int" Nullable="false" />
+    <Property Name="FuelType" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="VehicleType" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Belt_Vehicle">
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1" />
+    <End Role="Belt" Type="Self.Belt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Belt">
+        <PropertyRef Name="VehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Brake_Vehicle">
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1" />
+    <End Role="Brake" Type="Self.Brake" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Brake">
+        <PropertyRef Name="VehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuelFilter_Vehicle">
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1" />
+    <End Role="FuelFilter" Type="Self.FuelFilter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FuelFilter">
+        <PropertyRef Name="VehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Oil_Vehicle">
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1" />
+    <End Role="Oil" Type="Self.Oil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Oil">
+        <PropertyRef Name="VehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Owner_Vehicle">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UKey" />
+      </Principal>
+      <Dependent Role="Vehicle">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shock_Vehicle">
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1" />
+    <End Role="Shock" Type="Self.Shock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Shock">
+        <PropertyRef Name="VehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tyre_Vehicle">
+    <End Role="Vehicle" Type="Self.Vehicle" Multiplicity="1" />
+    <End Role="Tyre" Type="Self.Tyre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehicle">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tyre">
+        <PropertyRef Name="VehicleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VehiclesDataModelStoreContainer">
+    <EntitySet Name="Belt" EntityType="Self.Belt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Brake" EntityType="Self.Brake" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FuelFilter" EntityType="Self.FuelFilter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Oil" EntityType="Self.Oil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shock" EntityType="Self.Shock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tyre" EntityType="Self.Tyre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehicle" EntityType="Self.Vehicle" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Belt_Vehicle" Association="Self.FK_Belt_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Belt" EntitySet="Belt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Brake_Vehicle" Association="Self.FK_Brake_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Brake" EntitySet="Brake" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuelFilter_Vehicle" Association="Self.FK_FuelFilter_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="FuelFilter" EntitySet="FuelFilter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Oil_Vehicle" Association="Self.FK_Oil_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Oil" EntitySet="Oil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Owner_Vehicle" Association="Self.FK_Owner_Vehicle">
+      <End Role="User" EntitySet="User" />
+      <End Role="Vehicle" EntitySet="Vehicle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shock_Vehicle" Association="Self.FK_Shock_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Shock" EntitySet="Shock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tyre_Vehicle" Association="Self.FK_Tyre_Vehicle">
+      <End Role="Vehicle" EntitySet="Vehicle" />
+      <End Role="Tyre" EntitySet="Tyre" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

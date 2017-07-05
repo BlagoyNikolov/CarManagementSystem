@@ -1,0 +1,127 @@
+﻿@model CMS.Web.Models.AddConsumativeViewModel
+@{
+    ViewBag.Title = "AddConsumative";
+}
+
+<h2>AddConsumative</h2>
+<div class="row">
+    <div class="col-md-4">
+       @using (Html.BeginForm("AddOil", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+       {
+        @Html.AntiForgeryToken()
+        <br />
+        @Html.EditorFor(m => m.Oil.Brand)
+        @Html.EditorFor(m => m.Oil.Model)
+        @Html.EditorFor(m => m.Oil.ChangedDate)
+        @Html.EditorFor(m => m.Oil.MonthsToChange)
+        @Html.EditorFor(m => m.Oil.Range)
+        @Html.EditorFor(m => m.Oil.Viscosity)
+        @Html.EditorFor(m => m.Oil.Description)
+        //Model.VehicleId
+
+        <div class="row">
+            <div class="col-md-5 col-md-offset-2">
+                <input type="submit" class="btn btn-default" value="Add" />
+            </div>
+        </div>
+       }
+    </div>
+    <div class="col-md-4">
+        @using (Html.BeginForm("AddBelt", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <br />
+            @Html.EditorFor(m => m.Belt.Brand)
+            @Html.EditorFor(m => m.Belt.Model)
+            @Html.EditorFor(m => m.Belt.ChangedDate)
+            @Html.EditorFor(m => m.Belt.MonthsToChange)
+            @Html.EditorFor(m => m.Belt.Description)
+
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-4">
+        @using (Html.BeginForm("AddBrake", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <br />
+            @Html.EditorFor(m => m.Brake.Brand)
+            @Html.EditorFor(m => m.Brake.Model)
+            @Html.EditorFor(m => m.Brake.ChangedDate)
+            @Html.EditorFor(m => m.Brake.MonthsToChange)
+            @Html.EditorFor(m => m.Brake.Type)
+            @Html.EditorFor(m => m.Brake.Description)
+
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("AddFuelFilter", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <br />
+            @Html.EditorFor(m => m.FuelFilter.Brand)
+            @Html.EditorFor(m => m.FuelFilter.Model)
+            @Html.EditorFor(m => m.FuelFilter.ChangedDate)
+            @Html.EditorFor(m => m.FuelFilter.MonthsToChange)
+            @Html.EditorFor(m => m.FuelFilter.Type)
+            @Html.EditorFor(m => m.FuelFilter.Description)
+
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-4">
+        @using (Html.BeginForm("AddShock", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <br />
+            @Html.EditorFor(m => m.Shock.Brand)
+            @Html.EditorFor(m => m.Shock.Model)
+            @Html.EditorFor(m => m.Shock.ChangedDate)
+            @Html.EditorFor(m => m.Shock.MonthsToChange)
+            @Html.EditorFor(m => m.Shock.Type)
+            @Html.EditorFor(m => m.Shock.Range)
+            @Html.EditorFor(m => m.Shock.Description)
+
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-4">
+        @using (Html.BeginForm("AddTyre", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <br />
+            @Html.EditorFor(m => m.Tyre.Brand)
+            @Html.EditorFor(m => m.Tyre.Model)
+            @Html.EditorFor(m => m.Tyre.ChangedDate)
+            @Html.EditorFor(m => m.Tyre.MonthsToChange)
+            @Html.EditorFor(m => m.Tyre.Type)
+            @Html.EditorFor(m => m.Tyre.Description)
+
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

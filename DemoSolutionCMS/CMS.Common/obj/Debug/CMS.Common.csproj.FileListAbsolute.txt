@@ -1,0 +1,5 @@
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\CMS.Common\bin\Debug\CMS.Common.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\CMS.Common\bin\Debug\CMS.Common.pdb
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\CMS.Common\obj\Debug\CMS.Common.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\CMS.Common\obj\Debug\CMS.Common.pdb
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\CMS.Common\obj\Debug\CMS.Common.csprojResolveAssemblyReference.cache

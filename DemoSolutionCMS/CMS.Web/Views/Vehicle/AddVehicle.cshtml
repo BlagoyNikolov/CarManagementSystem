@@ -1,0 +1,94 @@
+﻿@model CMS.Web.Models.Vehicle
+@{
+    ViewBag.Title = "Add Vehicle";
+}
+
+<h2>@ViewBag.Title.</h2>
+@using (Html.BeginForm("Add", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @*<div class="form-group">
+            @Html.Label("Vehicle Type: ", new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-9">
+                @Html.EnumDropDownListFor(m => m.VehicleType)
+            </div>
+        </div>*@
+    <div class="form-group">
+        @Html.Label("Vehicle Brand: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.Brand)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Vehicle Model: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.Model)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Vehicle Year: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.Year)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Vehicle Mileage: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.Mileage)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Vehicle Average Mileage: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.AverageMileage)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Vehicle Color: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.Color)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Vehicle Engine Displacement: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.EngineDisplacement)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Vehicle Horse Power: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.HorsePower)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Vehicle Torque: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.Torque)
+        </div>
+    </div>
+    @*<div class="form-group">
+            @Html.Label("Vehicle Fuel Type: ", new { @class = "col-sm-3 control-label" })
+            <div class="col-sm-9">
+                @Html.EditorFor(m => m.FuelType, new { ListItem = Model.FuelType })
+            </div>
+        </div>*@
+    <div class="form-group">
+        @Html.Label("Vehicle Description: ", new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-9">
+            @Html.EditorFor(m => m.Description)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 col-md-offset-2">
+            <input type="submit" class="btn btn-default" value="Add" />
+        </div>
+    </div>
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+}

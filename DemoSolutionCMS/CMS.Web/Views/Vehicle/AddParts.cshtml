@@ -1,0 +1,318 @@
+﻿@model CMS.Web.Models.AddConsumativeViewModel
+@{
+    ViewBag.Title = "AddParts";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>Oil</h3>
+        @using (Html.BeginForm("AddOil", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.HiddenFor(m => m.VehicleId)
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.Label("Range: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Oil.Range)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Viscosity: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Oil.Viscosity)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Last Changed: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Oil.ChangedDate)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Time to change: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Oil.MonthsToChange)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Brand: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Oil.Brand)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Model: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Oil.Model)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Description: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Oil.Description)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-4">
+        <h3>Fuel Filter</h3>
+        @using (Html.BeginForm("AddFuelFilter", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.HiddenFor(m => m.VehicleId)
+            @Html.AntiForgeryToken()
+            @*<div class="form-group">
+                @Html.Label("Fuel Type: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EnumDropDownListFor(m => m.FuelFilter.Type, new { @class = "form-control" })
+                </div>
+            </div>*@
+            <div class="form-group">
+                @Html.Label("Last Changed: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.FuelFilter.ChangedDate)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Time to change: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.FuelFilter.MonthsToChange)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Brand: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.FuelFilter.Brand)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Model: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.FuelFilter.Model)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Description: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.FuelFilter.Description)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-4">
+        <h3>Tires</h3>
+        @using (Html.BeginForm("AddTyre", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.HiddenFor(m => m.VehicleId)
+            @Html.AntiForgeryToken()
+            @*<div class="form-group">
+                @Html.Label("Tire type: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EnumDropDownListFor(m => m.Tyre.Type)
+                </div>
+            </div>*@
+            <div class="form-group">
+                @Html.Label("Size: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Tyre.Size)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Last Changed: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Tyre.ChangedDate)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Time to change: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Tyre.MonthsToChange)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Brand: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Tyre.Brand)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Model: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Tyre.Model)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Description: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Tyre.Description)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>Brakes</h3>
+        @using (Html.BeginForm("AddBrake", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.HiddenFor(m => m.VehicleId)
+            @Html.AntiForgeryToken()
+            @*<div class="form-group">
+                @Html.Label("Brake type: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EnumDropDownListFor(m => m.Brake.Type)
+                </div>
+            </div>*@
+            <div class="form-group">
+                @Html.Label("Last Changed: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Brake.ChangedDate)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Time to change: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Brake.MonthsToChange)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Brand: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Brake.Brand)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Model: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Brake.Model)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Description: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Brake.Description)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-4">
+        <h3>Shock Absorbers</h3>
+        @using (Html.BeginForm("AddShock", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.HiddenFor(m => m.VehicleId)
+            @Html.AntiForgeryToken()
+            @*<div class="form-group">
+                @Html.Label("Shock type: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EnumDropDownListFor(m => m.Shock.Type)
+                </div>
+            </div>*@
+            <div class="form-group">
+                @Html.Label("Last Changed: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Shock.ChangedDate)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Time to change: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Shock.MonthsToChange)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Brand: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Shock.Brand)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Model: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Shock.Model)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Description: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Shock.Description)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-4">
+        <h3>Belt</h3>
+        @using (Html.BeginForm("AddBelt", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.HiddenFor(m => m.VehicleId)
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.Label("Range: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Belt.Range)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Last Changed: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Belt.ChangedDate)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Time to change: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Belt.MonthsToChange)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Brand: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Belt.Brand)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Model: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Belt.Model)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Description: ", new { @class = "col-sm-3 control-label" })
+                <div class="col-sm-9">
+                    @Html.EditorFor(m => m.Belt.Description)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="submit" class="btn btn-default" value="Add" />
+                </div>
+            </div>
+        }
+    </div>
+</div>

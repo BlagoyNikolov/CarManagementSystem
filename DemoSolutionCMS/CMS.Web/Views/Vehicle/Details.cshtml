@@ -1,0 +1,124 @@
+﻿@model CMS.Web.Models.Vehicle
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details about @Model.Brand @Model.Model @Model.Year.Year</h2>
+<div class="row">
+    <div class="col-md-5">
+        <h2>Image</h2>
+        <img alt="Car Image" src="@Url.Content("~/Images/defaultBlankImg.jpg")" style="height:250px;width:420px;" />
+    </div>
+    <div class="col-md-5">
+        <h2>Pending changes</h2>
+        <p>Oil: after 500 KM or 1 month</p>
+        <p>Fuel Filter: after 1000 KM</p>
+        <p>Brakes: N/A</p>
+        <p>Shock Absorbers: N/A</p>
+        <p>Tyres: N/A</p>
+        <p>Belt: after 1000 KM or 2 months</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        <h2>Vehicle Information</h2>
+        @*<p>@Model.vehicletype</p>*@
+        <div class="form-horizontal">
+            <div class="form-group">
+                @Html.Label("Vehicle Brand: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.Brand</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Vehicle Model: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.Model</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Year: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.Year.Year</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Engine Displacement: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.EngineDisplacement L</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Horse Power: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.HorsePower HP</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Torque: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.Torque Nm</p>
+                </div>
+            </div>
+            @*<p>@Model.fueltype</p>*@
+            <div class="form-group">
+                @Html.Label("Mileage: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.Mileage KM</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Average Mileage: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.AverageMileage KM/Month</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Color: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.Color</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("Description: ", new { @class = "col-sm-5 control-label" })
+                <div class="col-sm-3">
+                    <p>@Model.Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <h2>Actions</h2>
+        <p>Update monthly Mileage</p>
+        @using (Html.BeginForm("UpdateMileage", "Vehicle", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            <div class="col-md-10">
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        @Html.HiddenFor(m => m.Id)
+                        @Html.EditorFor(m => m.AverageMileage)
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <input type="submit" class="btn btn-default" value="Update" />
+            </div>
+        }
+
+        @using (Html.BeginForm("FuelCalculator", "Vehicle"))
+        {
+            <div class="col-md-10">
+                <input type="submit" class="btn btn-default" value="Fuel economy calculator" />
+            </div>
+        }
+        @using (Html.BeginForm("AddParts", "Vehicle", new { @vehicleId = Model.Id }))
+        {
+            <div class="col-md-10">
+                <input type="submit" class="btn btn-default" value="Add parts" />
+            </div>
+        }
+        <div class="col-md-10">
+            <input type="submit" class="btn btn-default" value="Connect to car" />
+        </div>
+    </div>
+</div>

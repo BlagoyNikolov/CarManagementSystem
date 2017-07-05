@@ -1,0 +1,5 @@
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\VehiclesData\bin\Debug\VehiclesData.dacpac
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\VehiclesData\bin\Debug\VehiclesData.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\VehiclesData\bin\Debug\VehiclesData.pdb
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\VehiclesData\obj\Debug\VehiclesData.dll
+c:\users\lenovo\documents\visual studio 2015\Projects\DemoSolutionCMS\VehiclesData\obj\Debug\VehiclesData.pdb
